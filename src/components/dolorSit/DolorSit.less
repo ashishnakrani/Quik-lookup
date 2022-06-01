@@ -1,0 +1,59 @@
+@import "../../../ant-var.less";
+
+.goals-section{
+  padding-top: 4rem;
+  h1.ant-typography{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    color: #F3F6F9;
+    span{
+      color: #f37a20;
+      margin-top: 0rem;
+      font-weight: 500;
+    }
+  }
+  .ant-typography{
+    color: #F3F6F9;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    margin-bottom: 0;
+    span{
+      margin-top: 2.125rem;
+      font-weight: 900;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px){
+  .goals-section{
+    h1.ant-typography{
+      font-size: 1.625rem;
+      line-height: 1.875rem;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .goals-section {
+    padding-top: 0rem;
+    padding-bottom: 2.5rem;
+    h1.ant-typography{
+      margin-bottom: 1.25rem;
+    }
+  }
+  .goals-section.invert {
+    padding-bottom: 1.875rem;
+  }
+}
+
+@media (max-width: 575px) {
+  .goals-section {
+    padding: 1.125rem 0.75rem 5.625rem 0.75rem;
+  }
+}

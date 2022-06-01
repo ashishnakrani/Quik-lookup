@@ -1,0 +1,228 @@
+@import "../../../ant-var.less";
+// ql features page
+.features-section {
+  background-color: @light-color3;
+  padding-bottom: 10.625rem;
+  @media screen and (min-width: 75rem){
+    &__container-main{
+      width: 1000%;
+      max-width: 62.5625rem;
+      margin-left: auto !important;
+      margin-right: auto !important;
+    }
+  }
+  .ant-col {
+    margin-top: -2rem;
+  }
+  .invert {
+    .ant-card:nth-child(odd) {
+      background-color: @light-color3;
+    }
+    .ant-card:nth-child(even) {
+      background-color: @light-color1;
+    }
+  }
+  .ant-card {
+    border-radius: 0.5rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0.9375rem 0.9375rem 1.875rem @opacity2;
+    margin-bottom: 2rem;
+    &:nth-child(even) {
+      background-color: @light-color3;
+    }
+    &-cover {
+      position: absolute;
+      right: -2rem;
+      left: unset;
+      top: -2.8125rem;
+      z-index: 0;
+    }
+    &-head {
+      border: none;
+      padding: 0;
+      min-height: auto;
+      &-title {
+        color: @accent1;
+        line-height: 1.75rem;
+        font-weight: 400;
+        font-size: 1.625rem;
+        padding: 0;
+        z-index: 1;
+        white-space: unset;
+        width: 100%;
+        max-width: 14.375rem;
+      }
+    }
+    &-body {
+      padding: 1rem 0;
+      .ant-list-item {
+        padding: 0.0625rem;
+        &-meta-content {
+          padding: 0;
+          background-color: transparent;
+          .ant-list-item-meta-description {
+            color: @accent12;
+            font-size: 1.0625rem;
+            line-height: 1.5rem;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+  .auto-compelete{
+    .ant-card-cover{
+      right: unset;
+      left: -1.875rem;
+      top: -3.75rem;
+    }
+  }
+  .sign-board{
+    .ant-card-cover{
+      top: -3.75rem;
+    }
+  }
+  .atals-image{
+    .ant-card-cover{
+      right: unset;
+      left: -2.5rem;
+      top: -2.3125rem;
+    }
+  }
+  .connect-iamge{
+    .ant-card-cover{
+      top: -4.0625rem;
+      right: -4.375rem;
+    }
+  }
+}
+// goals section start
+.goals-section{
+  padding-top: 4rem;
+  h1.ant-typography{
+    font-style: normal;
+    font-weight: 900;
+    font-size: 2.25rem;
+    line-height: 3rem;
+    display: flex;
+    flex-direction: column;
+    color: #F3F6F9;
+    span{
+      color: #f37a20;
+      margin-top: 0rem;
+      font-weight: 500;
+    }
+  }
+  .ant-typography{
+    color: #F3F6F9;
+    font-size: 1.125rem;
+    display: flex;
+    flex-direction: column;
+    font-weight: 400;
+    margin-bottom: 0;
+    span{
+      margin-top: 2.125rem;
+      font-weight: 900;
+    }
+  }
+}
+// goals section end
+// sign up sectio start
+.signup-bg{
+  padding-bottom: 7.5rem;
+  .box{
+    margin-top: -1.5625rem;
+    background-color: #F37A20;
+  }
+}
+// sign up section end
+@media screen and (max-width: 1199px){
+  .features-section{
+    padding-bottom: 3.125rem;
+    &__container-main{
+      .ant-col{
+        margin-bottom: 3.125rem;
+      }
+    }
+    .ant-card{
+      .ant-card-cover{
+        right: 0;
+      }
+    }
+    .auto-compelete{
+      .ant-card-cover{
+        right: unset;
+        left: -0.625rem;
+        top: -3.75rem;
+      }
+    }
+    .sign-board{
+      .ant-card-cover{
+        top: -3.75rem;
+      }
+    }
+    .atals-image{
+      .ant-card-cover{
+        right: unset;
+        left: -2.5rem;
+        top: -2.3125rem;
+      }
+    }
+    .connect-iamge{
+      .ant-card-cover{
+        top: -4.0625rem;
+        right: 0rem;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1023px){
+  .goals-section{
+    h1.ant-typography{
+      font-size: 1.625rem;
+      line-height: 1.875rem;
+    }
+  }
+}
+@media screen and (max-width: 767px){
+  .features-section{
+    padding-bottom: 0;
+    padding-top: 6.875rem;
+    .ant-card{
+      padding: 0.9375rem;
+    }
+    .atals-image{
+      .ant-card-cover{
+        left: -0.9375rem;
+      }
+    }
+  }
+  .container-main{
+    .catalogue-section{
+      padding: 1.875rem;
+      h1.ant-typography{
+        line-height: 2.5rem;
+      }
+    }
+  }
+  // .goals-section{
+  //   padding-top: 0rem;
+  //   padding-bottom: 2.5rem;
+  //   h1.ant-typography{
+  //     margin-bottom: 1.25rem;
+  //   }
+  // }
+}
+@media screen and (max-width: 385px){
+  .container-main{
+    .catalogue-section{
+      h1.ant-typography{
+        font-size: 1.625rem;
+        line-height: 1.875rem;
+        span {
+          font-size: 1.625rem;
+        }
+      }
+    }
+  }
+}

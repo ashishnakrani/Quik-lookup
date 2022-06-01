@@ -1,0 +1,92 @@
+@import "../../../ant-var.less";
+
+
+.signup-bg {
+  margin-top: -2.0625rem;
+  background: @accent1;
+  padding-bottom: 2.625rem;
+  .container {
+    max-width: 776px;
+    width: 100%;
+  }
+  .box {
+    padding: 2.1875rem 4rem;
+    background-color: @accent-secondary-color;
+    border-radius: 0.5rem;
+    margin-top: -3.5rem;
+    .ant-image {
+      position: absolute;
+      right: -6.4375rem;
+      top: -5.1875rem;
+    }
+    .ant-btn {
+      background-color: @accent1;
+      color: @light-color1;
+      padding: 0.5rem 1rem !important;
+      border: none;
+      font-size: 0.875rem;
+      font-weight: bold;
+      line-height: 1rem;
+      margin-top: 2rem;
+    }
+    h4.ant-typography {
+      font-size: 1.0625rem;
+      font-weight: 700;
+      color: @light-color1;
+      width: 21.875rem;
+      max-width: 100%;
+      line-height: 1.5rem;
+      margin: 0;
+    }
+    h3.ant-typography {
+      font-style: normal;
+      font-size: @font-size-xl-ql;
+      line-height: 3rem;
+      margin-bottom: 1rem;
+      color: @light-color1;
+      font-weight: normal;
+    }
+  }
+}
+
+@media screen and (max-width: 1023px){
+   
+}
+
+@media screen and (max-width: 767px) {
+  .signup-bg {
+    padding-top: 1.25rem;
+    padding-bottom: 3rem;
+    .box {
+      margin-left: 0.75rem;
+      margin-right: 0.75rem;
+      .ant-image {
+        width: 50%;
+        right: -3rem;
+        left: unset;
+        top: 50%;
+      }
+      h4.ant-typography {
+        max-width: 60%;
+      }
+    }
+  } 
+}
+
+@media (max-width: 575px) {
+  .signup-bg {
+    .box {
+      padding: 10rem 1.5rem 1.5rem;
+      margin-left: auto;
+      margin-right: auto;
+      .ant-image {
+        top: -10.25rem;
+        width: 100%;
+        right: 0;
+      }
+      h4.ant-typography {
+        max-width: 100%;
+      }
+    }
+  }
+}

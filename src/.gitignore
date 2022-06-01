@@ -1,0 +1,4 @@
+pages/**/*.css
+pages/**/*.css.map
+components/**/*.css
+components/**/*.css.map

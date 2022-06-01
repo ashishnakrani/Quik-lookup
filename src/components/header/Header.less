@@ -1,0 +1,123 @@
+@import "../../../ant-var.less";
+
+.ant-layout-header {
+  position: relative;
+  height: auto;
+  padding: 0;
+  border-bottom: 0.0625rem solid @accent4;
+  margin: 3.125rem @margin-base-ql @margin-base-ql @margin-base-ql;
+  background-color: @light-color1;
+
+  .ant-menu-horizontal .ant-menu-item {
+    &.ant-menu-item-selected a {
+      color: @secondary-color1;
+    }
+  }
+
+  .ant-space {
+    float: right;
+  }
+
+  .logo-wrapper {
+    display: block;
+    width: 100%;
+    max-width: 189px;
+    margin-bottom: 1rem;
+    line-height: 1;
+  }
+
+  .header-menu-items {
+    justify-content: left;
+  }
+
+  .ant-menu-horizontal > .ant-menu-item a:hover {
+    color: @secondary-color1;
+  }
+
+  .ant-menu {
+    margin-top: 0;
+    line-height: 1;
+  }
+}
+
+.ant-menu {
+  justify-content: center;
+  border: none;
+  margin-top: 0.9rem;
+  line-height: 1;
+  text-align: center;
+}
+
+.ant-badge-count {
+  top: 0.3125rem;
+  right: 0.375rem;
+  width: 0.8125rem;
+  min-width: 0.8125rem;
+  height: 0.8125rem;
+  padding: 0;
+  background-color: @accent9;
+  font-size: 0.5625rem;
+  line-height: 0.8125rem;
+  box-shadow: none;
+}
+
+.ant-badge img {
+  object-fit: contain;
+}
+
+.logout-icon {
+  height: 1.5625rem;
+}
+
+/*  large screens (xl) */
+@media (min-width: 1200px) {
+  .ant-layout-header {
+    margin: 3.125rem 0 @margin-base-ql 0;
+  }
+}
+
+/* tablet (md) */
+@media (min-width: 768px) and (max-width: 991.5px) {
+  .ant-layout-header {
+    border: none;
+    margin: @margin-sm-ql;
+  }
+}
+
+/* mobile (sm) */
+@media (min-width: 574px) and (max-width: 767.5px) {
+  .ant-layout-header {
+    padding: 0;
+    border-bottom: none;
+    margin: @margin-sm-ql;
+  }
+}
+
+/* (xs) */
+@media (max-width: 575px) {
+  .ant-layout-header {
+    padding: 0;
+    border-bottom: none;
+    margin: @margin-sm-ql;
+  }
+}
+
+.back-arrow-button {
+  width: 1.0625rem;
+  height: 1.0625rem;
+}
+
+.header-custom-container {
+  .ant-layout-header {
+    margin: 3.25rem 0 0 0;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-custom-container {
+    .ant-layout-header {
+      padding: 0 0.9375rem;
+      margin: 1.25rem 0 0 0;
+    }
+  }
+}

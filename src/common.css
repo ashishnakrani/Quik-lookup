@@ -1,0 +1,17 @@
+.innerContainer {
+  width: 100%;
+  max-width: 63.0625rem;
+  margin: auto;
+}
+a.ant-typography,
+.ant-typography a,
+a.ant-typography:hover,
+.ant-typography a:hover {
+  text-decoration: underline;
+}
+@media (max-width: 1200px) {
+  .innerContainer {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=common.css.map */
