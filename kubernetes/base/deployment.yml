@@ -1,0 +1,58 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quicklookup
+spec:
+  revisionHistoryLimit: 5
+  selector:
+    matchLabels:
+      app: quicklookup
+  template:
+    spec:
+      serviceAccountName: backend-service
+      automountServiceAccountToken: true
+      containers:
+        - name: quicklookup
+          image: fake-image
+          resources:
+            requests:
+              memory: 64Mi
+              cpu: 0.1
+            limits:
+              memory: 256Mi
+              cpu: 0.5
+          livenessProbe:
+            httpGet:
+              port: http
+              path: /
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              port: http
+              path: /
+            initialDelaySeconds: 5
+            periodSeconds: 10
+            timeoutSeconds: 2
+          ports:
+            - containerPort: 3000
+              name: http
+          envFrom:
+            - configMapRef:
+                name: quicklookup-config
+          env:
+            - name: PORT
+              value: "3000"
+---
+apiVersion: autoscaling/v1
+kind: HorizontalPodAutoscaler
+metadata:
+  name: quicklookup
+spec:
+  scaleTargetRef:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: quicklookup
+  maxReplicas: 2
+  minReplicas: 1
+  targetCPUUtilizationPercentage: 60

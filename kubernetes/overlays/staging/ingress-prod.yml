@@ -1,0 +1,30 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+    name: quicklookup-prod
+    annotations:
+        # nginx ingress
+        kubernetes.io/ingress.class: nginx
+        nginx.ingress.kubernetes.io/rewrite-target: /$1
+        # cert-manager
+        ingress.kubernetes.io/ssl-redirect: "true"
+        cert-manager.io/cluster-issuer: clusterissuer-letsencrypt-production
+        # external-dns
+        external-dns.alpha.kubernetes.io/hostname: quicklookup.com
+        # CORS
+        nginx.ingress.kubernetes.io/enable-cors: "false"
+        nginx.ingress.kubernetes.io/cors-allow-origin: "*"
+
+spec:
+    rules:
+        - host: quicklookup.com
+          http:
+              paths:
+                  - path: /(.*)
+                    backend:
+                        serviceName: quicklookup
+                        servicePort: http
+    tls:
+        - hosts:
+              - quicklookup.com
+          secretName: quicklookup-prod-tls-secret
